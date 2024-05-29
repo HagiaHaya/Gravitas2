@@ -528,6 +528,21 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     ],
     results: [{ item: "create:large_cogwheel" }]
   })
+  event.custom({
+    type: "create:compacting",
+    ingredients: [
+      {
+        item: "tfc:seeds/wheat"
+      }
+    ],
+            results: [
+                {
+                    fluid: 'createaddition:seed_oil',
+                    nbt: {},
+                    amount: 100
+                },
+            ],
+  })
   //Create End
 
   //GTCEU Start
