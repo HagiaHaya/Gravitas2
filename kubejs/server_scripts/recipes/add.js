@@ -477,7 +477,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     [
       {
         type: 'tfc:heatable',
-        min_temp: 921,
+        //min_temp: 921,
         ingredient: {
           item: 'tfc:raw_iron_bloom',
         },
@@ -491,7 +491,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
     [
       {
         type: 'tfc:heatable',
-        min_temp: 921,
+        //min_temp: 921,
         ingredient: {
           item: 'tfc:refined_iron_bloom',
         },
