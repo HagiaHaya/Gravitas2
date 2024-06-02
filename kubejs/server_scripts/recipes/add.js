@@ -382,7 +382,7 @@ let recipeAdd = (/** @type {Internal.RecipesEventJS} */ event) => {
   molds.forEach((mold) => {
     event.recipes.gtceu.forming_press(`gregitas:molds/${mold}`)
     .itemInputs(`5x minecraft:clay_ball`)
-    .itemOutputs(`tfc:ceramic/unfired_${mold}_mold`)
+    .itemOutputs(`2x tfc:ceramic/unfired_${mold}_mold`)
     .notConsumable(`tfc:ceramic/${mold}_mold`)
     .duration(100)
     .EUt(LV)
@@ -582,21 +582,6 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
     ],
     results: [{ item: "create:large_cogwheel" }]
   })
-  event.custom({
-    type: "create:compacting",
-    ingredients: [
-      {
-        item: "tfc:seeds/wheat"
-      }
-    ],
-            results: [
-                {
-                    fluid: 'createaddition:seed_oil',
-                    nbt: {},
-                    amount: 100
-                },
-            ],
-  })
   //Create End
 
   //GTCEU Start
@@ -706,6 +691,7 @@ event.recipes.create.pressing("gtceu:wrought_iron_plate", ["#forge:ingots/wrough
                S: `tfc:wood/planks/${sapling}_slab`,
                L: `tfc:wood/stripped_log/${sapling}`
      })
+    event.recipes.create.haunting('charcoal', `tfc:wood/log/${sapling}`)
     //Greenhouse
     event.recipes.gtceu
       .greenhouse(`gregitas:${sapling}`)
